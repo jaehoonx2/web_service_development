@@ -1,0 +1,28 @@
+food {
+
+}
+
+name {
+    display: block;
+    text-align: center;
+}
+
+price {
+    display: block;
+    text-align: center;
+}
+
+description {
+    display: block;
+    text-align: center;
+}
+
+calories {
+    display: block;
+    text-align: center;
+}
+
+serving_time {
+    display: block;
+    text-align: center;
+}
