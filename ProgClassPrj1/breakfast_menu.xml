@@ -6,6 +6,7 @@
 Two of our famous Belgian Waffles with plenty of real maple syrup
 </description>
 <calories>650</calories>
+<serving_time> 24/7 hour </serving_time>
 </food>
 <food>
 <name>Strawberry Belgian Waffles</name>
@@ -14,6 +15,7 @@ Two of our famous Belgian Waffles with plenty of real maple syrup
 Light Belgian waffles covered with strawberries and whipped cream
 </description>
 <calories>900</calories>
+<serving_time> 24/7 hour </serving_time>
 </food>
 <food>
 <name>Berry-Berry Belgian Waffles</name>
@@ -22,6 +24,7 @@ Light Belgian waffles covered with strawberries and whipped cream
 Light Belgian waffles covered with an assortment of fresh berries and whipped cream
 </description>
 <calories>900</calories>
+<serving_time> 24/7 hour </serving_time>
 </food>
 <food>
 <name>French Toast</name>
@@ -30,6 +33,7 @@ Light Belgian waffles covered with an assortment of fresh berries and whipped cr
 Thick slices made from our homemade sourdough bread
 </description>
 <calories>600</calories>
+<serving_time> morning hour </serving_time>
 </food>
 <food>
 <name>Homestyle Breakfast</name>
@@ -38,5 +42,51 @@ Thick slices made from our homemade sourdough bread
 Two eggs, bacon or sausage, toast, and our ever-popular hash browns
 </description>
 <calories>950</calories>
+<serving_time> morning hour </serving_time>
+</food>
+<food>
+<name>Korean Breakfast</name>
+<price>$10.00</price>
+<description>
+Typical Korean breakfast with several side dishes
+</description>
+<calories>600</calories>
+<serving_time> morning hour </serving_time>
+</food>
+<food>
+<name>Vegan Bibimbab</name>
+<price>$5.00</price>
+<description>
+Mixed rice with several herbs
+</description>
+<calories>500</calories>
+<serving_time> lunch hour </serving_time>
+</food>
+<food>
+<name>Beef Bibimbab</name>
+<price>$6.00</price>
+<description>
+Mixed rice with beef and herbs with soy source
+</description>
+<calories>500</calories>
+<serving_time> lunch hour </serving_time>
+</food>
+<food>
+<name>Kimchi Pancake</name>
+<price>$10.00</price>
+<description>
+Pancake with Kimchi, spring onion and red pepper
+</description>
+<calories>1000</calories>
+<serving_time> dinner hour </serving_time>
+</food>
+<food>
+<name>Chicken Soup with Ginseng</name>
+<price>$10.00</price>
+<description>
+Korean style chicken soup with ginseng
+</description>
+<calories>1500</calories>
+<serving_time> dinner hour </serving_time>
 </food>
 </breakfast_menu>
