@@ -1,28 +1,336 @@
 food {
+    width: 500px;
+    height: 300px;
 
+    display: block;
+
+    background: yellow;
+    background-clip: content-box;
+
+    border: 5px double black;
+    padding: 20px;
+    margin-bottom: 50px;
+
+    box-shadow: 10px 10px grey;
+
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
 }
 
 name {
-    display: block;
     text-align: center;
+    text-shadow: 2px 2px 5px red;
+
+    display: block;
+
+    border: 5px dashed black;
+    padding: 20px;
+    background: lightblue;
+    background-clip: border-box;
+
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+
+    -webkit-transition: width 2s, -webkit-transform 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 2s, transform 2s;
+}
+
+food name:hover {
+    width: 300px;
+
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+
 }
 
 price {
-    display: block;
     text-align: center;
+    font-size: 50px;
+
+    display: block;
+
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+
+    -webkit-transition: height 2s, -webkit-transform 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: height 2s, transform 2s;
+}
+
+food price:hover {
+    height: 80px;
+
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+
+    -webkit-animation-name: size_down;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: size_down;
+    animation-duration: 2s;
 }
 
 description {
-    display: block;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+
+    display: block;
+
+    border: 5px dotted black;
+    padding: 15px;
+    background: aqua;
+    background-clip: padding-box;
+
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    -webkit-transition: height 2s, -webkit-transform 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: height 2s, transform 2s;
+
+    position: relative;
+    -webkit-animation-name: location_change;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: location_change;
+    animation-duration: 4s;
+
+}
+
+food description:hover {
+    height: 100px;
+
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+
 }
 
 calories {
-    display: block;
     text-align: center;
+    font-size: 20px;
+
+    display: block;
+
+    -webkit-transform: skewY(20deg);
+    transform: skewY(20deg);
+
+    -webkit-animation-name: color_change;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: color_change;
+    animation-duration: 2s;
+}
+
+food calories:hover {
+    -webkit-animation-name: size_up;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: size_up;
+    animation-duration: 2s;
 }
 
 serving_time {
-    display: block;
+    width: 100px;
+    height: 30px;
+
     text-align: center;
+    font-size: 20px;
+    display: block;
+    background: red;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+    margin-top: 40px;
+
+    position: relative;
+    -webkit-animation-name: location_change2;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: location_change2;
+    animation-duration: 4s;
+
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 2s, transform 2s;
+}
+
+food serving_time:hover {
+    width: 150px;
+    height: 50px;
+
+    background: blue;
+
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+}
+
+
+/*******************************************
+*************Animation effects**************
+*******************************************/
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes color_change {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+/* Standard syntax */
+@keyframes color_change {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+@-webkit-keyframes location_change {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: 100px;
+        top: 100px;
+    }
+}
+
+/* Standard syntax */
+@keyframes location_change {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: 100px;
+        top: 100px;
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes location_change2 {
+    0% {
+        right: 0px;
+        bottom: 0px;
+    }
+
+    100% {
+        right: 100px;
+        bottom: 100px;
+    }
+}
+
+/* Standard syntax */
+@keyframes location_change2 {
+    0% {
+        right: 0px;
+        bottom: 0px;
+    }
+
+    100% {
+        right: 100px;
+        bottom: 100px;
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes size_up {
+     0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.3, 1.3);
+        transform: scale(1.3, 1.3);
+    }
+
+    100% {
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1.5, 1.5);
+    }
+}
+
+/* Standard syntax */
+@keyframes size_up {
+    0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.3, 1.3);
+        transform: scale(1.3, 1.3);
+    }
+
+    100% {
+        -webkit-transform: scale(1.5, 1.5);
+        transform: scale(1.5, 1.5);
+    }
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes size_down {
+    0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.8, 0.8);
+        transform: scale(0.8, 0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
+}
+
+/* Standard syntax */
+@keyframes size_down {
+   0% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale(0.8, 0.8);
+        transform: scale(0.8, 0.8);
+    }
+
+    100% {
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+    }
 }
