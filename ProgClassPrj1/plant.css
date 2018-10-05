@@ -11,6 +11,8 @@ PLANT {
     margin: 50px;
 
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+
+
 }
 
 COMMON {
@@ -36,6 +38,9 @@ BOTANICAL {
     padding: 20px;
     background: lightblue;
     background-clip: content-box;
+
+
+
 }
 
 PLANT BOTANICAL:hover {
@@ -54,6 +59,16 @@ ZONE {
     -webkit-transform: scale(0.5, 0.5);
     /* Safari */
     transform: scale(0.5, 0.5);
+
+    position: relative;
+
+         -webkit-animation-name: location_change;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: location_change;
+    animation-duration: 4s;
+
 }
 
 PLANT ZONE:hover {
@@ -64,21 +79,19 @@ PLANT ZONE:hover {
 LIGHT {
     display: block;
 
-    -webkit-transform: skewX(20deg);
-    /* Safari */
-    transform: skewX(20deg);
+    position: relative;
+
 
     -webkit-transform: translate(30px, 30px);
     /* Safari */
     transform: translate(30px, 30px);
-    -webkit-animation: example5 4s 1s infinite linear alternate;
-    animation: example5 4s 1s infinite linear alternate;
+
 
 }
 
-LIGHT BOTANICAL:hover {
-    -webkit-transform: skewX(0deg);
-    transform: skewX(0deg);
+PLANT LIGHT:hover {
+    -webkit-transform: skewX(40deg);
+    transform: skewX(40deg);
 }
 
 PRICE {
@@ -242,6 +255,17 @@ COLOR {
     }
 }
 
+@keyframes example3 {
+    33% {
+        transform: translateX(-50px);
+    }
+
+    66% {
+        transform: translateX(50px);
+    }
+}
+
+
 @keyframes example4 {
     33% {
         transform: translateY(-50px);
@@ -262,22 +286,28 @@ COLOR {
     }
 }
 
-@-webkit-keyframes exmaple5 {
-    33% {
-        transform: translateZ(-50px);
+@-webkit-keyframes location_change {
+    0% {
+        left: 0px;
+        top: 0px;
     }
 
-    66% {
-        transform: translateZ(50px);
+    100% {
+        left: 100px;
+        top: 100px;
     }
 }
 
-@keyframes example5 {
-    33% {
-        transform: translateZ(-50px);
+/* Standard syntax */
+@keyframes location_change {
+    0% {
+        left: 0px;
+        top: 0px;
     }
 
-    66% {
-        transform: translateZ(50px);
+    100% {
+        left: 100px;
+        top: 100px;
     }
 }
+
