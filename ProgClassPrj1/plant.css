@@ -1,7 +1,283 @@
-COMMON
-BOTANICAL
-ZONE
-LIGHT
-PRICE
-AVAILABILITY
-COLOR
+PLANT {
+    display: block;
+    width: 500px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid black;
+
+    -webkit-transform: rotate(340deg);
+    transform: rotate(340deg);
+
+    margin: 50px;
+
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+COMMON {
+    display: block;
+    border: 5px dotted black;
+    padding: 40px;
+    background: green;
+    background-clip: padding-box;
+
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+
+
+BOTANICAL {
+    display: block;
+    border: 3px double black;
+    padding: 20px;
+    background: lightblue;
+    background-clip: content-box;
+}
+
+PLANT BOTANICAL:hover {
+    -webkit-transform: skewY(10deg);
+    transform: skewY(10deg);
+}
+
+
+ZONE {
+    display: block;
+    border: 3px dashed black;
+    padding: 20px;
+    background: yellow;
+    background-clip: border-box;
+
+    -webkit-transform: scale(0.5, 0.5);
+    /* Safari */
+    transform: scale(0.5, 0.5);
+}
+
+PLANT ZONE:hover {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1, 0);
+}
+
+LIGHT {
+    display: block;
+
+    -webkit-transform: skewX(20deg);
+    /* Safari */
+    transform: skewX(20deg);
+
+    -webkit-transform: translate(30px, 30px);
+    /* Safari */
+    transform: translate(30px, 30px);
+    -webkit-animation: example5 4s 1s infinite linear alternate;
+    animation: example5 4s 1s infinite linear alternate;
+
+}
+
+LIGHT BOTANICAL:hover {
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+}
+
+PRICE {
+    display: block;
+
+    color: white;
+    text-shadow: 2px 3px 5px black, 0 0 25px blue, 0 0 5px darkblue;
+
+    -webkit-transform: skewY(10deg);
+    /* Safari */
+    transform: skewY(10deg);
+
+    -webkit-transform: translate(30px, 30px);
+    /* Safari */
+    transform: translate(30px, 30px);
+    -webkit-animation: example4 4s 1s infinite linear alternate;
+    animation: example4 4s 1s infinite linear alternate;
+}
+
+
+
+AVAILABILITY {
+    display: block;
+
+
+    -webkit-transform: scale(0.5, 2);
+    /* Safari */
+    transform: scale(0.5, 2);
+
+    position: relative;
+    -webkit-animation-name: example2;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example2;
+    animation-duration: 4s;
+}
+
+PLANT AVAILABILITY:hover {
+
+    -webkit-transform: translate(10px, 10px);
+    transform: translate(10px, 10px);
+}
+
+COLOR {
+    display: inline-block;
+
+    background-color: aquamarine;
+    color: red;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    -webkit-transform: translate(30px, 30px);
+    /* Safari */
+    transform: translate(30px, 30px);
+    -webkit-animation: example3 4s 1s infinite linear alternate;
+    animation: example3 4s 1s infinite linear alternate;
+
+}
+
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: violet;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: violet;
+    }
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example2 {
+    0% {
+        background-color: indigo;
+
+    }
+
+    25% {
+        background-color: saddlebrown;
+
+    }
+
+    50% {
+        background-color: bisque;
+
+    }
+
+    75% {
+        background-color: forestgreen;
+
+    }
+
+    100% {
+        background-color: magenta;
+
+    }
+}
+
+/* Standard syntax */
+@keyframes example2 {
+    0% {
+        background-color: indigo;
+    }
+
+    25% {
+        background-color: saddlebrown;
+    }
+
+    50% {
+        background-color: bisque;
+    }
+
+    75% {
+        background-color: forestgreen;
+    }
+
+    100% {
+        background-color: magenta;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@-webkit-keyframes example3 {
+    33% {
+        transform: translateX(-50px);
+    }
+
+    66% {
+        transform: translateX(50px);
+    }
+}
+
+@keyframes example4 {
+    33% {
+        transform: translateY(-50px);
+    }
+
+    66% {
+        transform: translateY(50px);
+    }
+}
+
+@-webkit-keyframes example4 {
+    33% {
+        transform: translateY(-50px);
+    }
+
+    66% {
+        transform: translateY(50px);
+    }
+}
+
+@-webkit-keyframes exmaple5 {
+    33% {
+        transform: translateZ(-50px);
+    }
+
+    66% {
+        transform: translateZ(50px);
+    }
+}
+
+@keyframes example5 {
+    33% {
+        transform: translateZ(-50px);
+    }
+
+    66% {
+        transform: translateZ(50px);
+    }
+}
