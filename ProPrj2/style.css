@@ -1,0 +1,118 @@
+header {
+    background: red;
+    height: 100px;
+    text-align: center;
+    border: 5px solid navy;
+
+    margin-bottom: 30px;
+}
+
+footer {
+    border: 2px solid black;
+    margin-top: 100px;
+    padding : 50px;
+}
+
+nav {
+    padding-left: 4px;
+    border: 3px groove black;
+    width: 20%;
+    height: 2000px;
+    display: inline-block;
+    background: yellow;
+    vertical-align: top;
+    float: left;
+}
+
+/* unvisited link */
+ul#list li>a:link {
+    color: red;
+}
+
+/* visited link */
+ul#list li>a:visited {
+    color: green;
+}
+
+/* mouse over link */
+ul#list li>a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+ul#list li>a:active {
+    color: blue;
+}
+
+main {
+    border: 2px dashed green;
+    width: 78%;
+    height: 2000px;
+    display: inline-block;
+    background: skyblue;
+    vertical-align: top;
+    float: right;
+}
+
+h2 + p {
+    background-color: silver;
+}
+
+aside {
+    display: inline-block;
+    float: right;
+}
+
+aside > a {
+    background-color: red;
+}
+
+h1, h2 {
+    margin-left: 10px;
+}
+
+table {
+    margin-left: 10px;
+    background-color: beige;
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table th {
+    color: white;
+    background-color: black;
+}
+
+div.menu2 {
+    font-weight: bold;
+    color: white;
+    border: 2px solid black;
+    text-align: center;
+    width: 100px;
+    background-color: sienna
+}
+
+div.menu2:hover a {
+    display: block;
+}
+
+div.menu2 a {
+    display: none;
+    border-right: 2px solid red;
+    background-color: none;
+    color: black;
+}
+
+div.menu2 a:hover {
+    background-color: cyan;
+}
+
+summary {
+    background-color: azure;
+}
